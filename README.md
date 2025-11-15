@@ -1,4 +1,4 @@
-# 📝 SunstoneNotes 
+# 📝 SunstoneNotes - Professional Note Taking App
 
 A modern, responsive note-taking application built with React, featuring dark/light theme support, real-time search, and professional UI/UX design.
 
