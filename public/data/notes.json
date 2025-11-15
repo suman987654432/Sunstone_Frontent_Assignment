@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Meeting Notes",
+    "description": "Discussion about project milestones and upcoming deadlines",
+    "category": "work",
+    "createdAt": "2025-01-12T09:00:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Shopping List",
+    "description": "Groceries for the week: milk, bread, eggs, fruits",
+    "category": "personal",
+    "createdAt": "2025-01-11T14:30:00Z"
+  },
+  {
+    "id": 3,
+    "title": "App Feature Ideas",
+    "description": "Dark mode, offline sync, voice notes, collaborative editing",
+    "category": "ideas",
+    "createdAt": "2025-01-10T16:45:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Daily Tasks",
+    "description": "Complete code review, update documentation, team standup",
+    "category": "tasks",
+    "createdAt": "2025-01-09T08:15:00Z"
+  }
+]
