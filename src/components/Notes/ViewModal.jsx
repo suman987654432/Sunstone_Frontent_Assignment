@@ -7,7 +7,8 @@ const ViewModal = ({
     onEditFromView,
     onDeleteFromView,
     isDuplicateTitle,
-    formatDateTime
+    formatDateTime,
+    getDuplicateCount
 }) => {
     if (!showModal || !viewingNote) return null;
 
@@ -41,8 +42,8 @@ const ViewModal = ({
                             {isDuplicateTitle(viewingNote) && (
                                 <span className="inline-flex items-center gap-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs px-2 py-1 rounded-full">
                                     <FiAlertTriangle className="text-xs" />
-                                    <span className="hidden sm:inline">Duplicate Title</span>
-                                    <span className="sm:hidden">Duplicate</span>
+                                    <span className="hidden sm:inline">Duplicate Title #{getDuplicateCount(viewingNote)}</span>
+                                    <span className="sm:hidden">Duplicate #{getDuplicateCount(viewingNote)}</span>
                                 </span>
                             )}
                         </div>

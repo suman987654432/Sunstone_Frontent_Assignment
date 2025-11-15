@@ -69,7 +69,15 @@ const Notes = ({
 
     const getDuplicateCount = (note) => {
         const normalizedTitle = note.title.toLowerCase().trim();
-        return duplicateGroups[normalizedTitle]?.length || 0;
+        const duplicateIds = duplicateGroups[normalizedTitle] || [];
+        
+        if (duplicateIds.length <= 1) return 0;
+        
+        // Sort IDs to ensure consistent numbering
+        const sortedIds = duplicateIds.sort((a, b) => a - b);
+        const noteIndex = sortedIds.indexOf(note.id);
+        
+        return noteIndex + 1; // Start numbering from 1
     };
 
     const handleEditClick = (note) => {

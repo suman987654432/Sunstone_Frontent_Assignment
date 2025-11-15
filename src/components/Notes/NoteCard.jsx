@@ -21,10 +21,10 @@ const NoteCard = ({
                     <h3 className="font-semibold text-gray-800 dark:text-white truncate flex items-center gap-2">
                         {note.title}
                         {isDuplicateTitle(note) && (
-                            <span className="inline-flex items-center gap-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs px-2 py-1 rounded-full">
-                                <FiAlertTriangle className="text-xs" />
-                                Duplicate ({getDuplicateCount(note)})
-                            </span>
+                          <span className="inline-flex items-center gap-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs px-2 py-1 rounded-full">
+                            <FiAlertTriangle className="text-xs" />
+                            Duplicate #{getDuplicateCount(note)}
+                          </span>
                         )}
                     </h3>
                 </div>
