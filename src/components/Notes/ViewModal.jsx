@@ -39,11 +39,15 @@ const ViewModal = ({
                             <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 capitalize">
                                 {viewingNote.category}
                             </span>
-                            {isDuplicateTitle(viewingNote) && (
+                            {isDuplicateTitle && typeof isDuplicateTitle === 'function' && isDuplicateTitle(viewingNote) && (
                                 <span className="inline-flex items-center gap-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs px-2 py-1 rounded-full">
                                     <FiAlertTriangle className="text-xs" />
-                                    <span className="hidden sm:inline">Duplicate Title #{getDuplicateCount(viewingNote)}</span>
-                                    <span className="sm:hidden">Duplicate #{getDuplicateCount(viewingNote)}</span>
+                                    <span className="hidden sm:inline">
+                                        Duplicate Title #{getDuplicateCount && typeof getDuplicateCount === 'function' ? getDuplicateCount(viewingNote) : '1'}
+                                    </span>
+                                    <span className="sm:hidden">
+                                        Duplicate #{getDuplicateCount && typeof getDuplicateCount === 'function' ? getDuplicateCount(viewingNote) : '1'}
+                                    </span>
                                 </span>
                             )}
                         </div>
@@ -61,7 +65,10 @@ const ViewModal = ({
                             <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
                                 <span className="text-sm font-medium">Created:</span>
                                 <span className="text-sm">
-                                    {formatDateTime(new Date(viewingNote.createdAt))}
+                                    {formatDateTime && typeof formatDateTime === 'function' 
+                                        ? formatDateTime(new Date(viewingNote.createdAt))
+                                        : new Date(viewingNote.createdAt).toLocaleString()
+                                    }
                                 </span>
                             </div>
                         </div>
