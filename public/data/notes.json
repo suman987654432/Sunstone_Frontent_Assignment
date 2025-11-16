@@ -19,12 +19,6 @@
     "description": "Dark mode, offline sync, voice notes, collaborative editing",
     "category": "ideas",
     "createdAt": "2025-01-10T16:45:00Z"
-  },
-  {
-    "id": 4,
-    "title": "Daily Tasks",
-    "description": "Complete code review, update documentation, team standup",
-    "category": "tasks",
-    "createdAt": "2025-01-09T08:15:00Z"
   }
+
 ]
